@@ -33,6 +33,7 @@ function removerJogador() {
   );
   if (confirm("Deseja remover o jogador " + jogador.innerHTML + "?")) {
     escalacao.removeChild(jogador);
+    alert("Jogador removido com sucesso.");
     document.getElementById("removeCamisa").value = "";
   }
 }
