@@ -66,6 +66,8 @@ button {
 
 .disabled {
 	background-color: var(--disabled-color);
+	color: var(--font-color);
+	cursor: default;
 }
 
 .highlight {
@@ -82,14 +84,20 @@ button {
 }
 
 #start-btn {
-	display: block;
-	justify-self: center;
 	padding: 0.5rem;
 	border-radius: 999px;
 }
 
+#start-btn-container {
+	display: flex;
+	justify-content: center;
+}
+
 #game button {
 	aspect-ratio: 1;
+	transition: 0.15s;
+	color: #000;
+	font-size: 4rem;
 }
 
 #game button:hover {
