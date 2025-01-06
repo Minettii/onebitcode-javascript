@@ -1,0 +1,116 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--border-color: #000;
+	--bg-color: #212529;
+	--font-color: #f1f5f9;
+	--primary-color: #4dff91;
+	--disabled-color: #666;
+	--highlight-color: #148;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--font-color);
+	font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+main {
+	display: block;
+	margin: 0 auto;
+	max-width: 40rem;
+	padding: 0 1.5rem 2.5rem;
+	position: relative;
+}
+
+header {
+	margin: 2rem 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+header input {
+	padding: 0.25rem;
+	border-radius: 0.25rem;
+}
+
+header div {
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+header span {
+	margin: 0 0.5rem;
+}
+
+button {
+	background-color: var(--primary-color);
+	border: 2px solid var(--border-color);
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
+
+.disabled {
+	background-color: var(--disabled-color);
+}
+
+.highlight {
+	background-color: var(--highlight-color);
+}
+
+#round-details {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	max-height: 35px;
+}
+
+#start-btn {
+	display: block;
+	justify-self: center;
+	padding: 0.5rem;
+	border-radius: 999px;
+}
+
+#game button {
+	aspect-ratio: 1;
+}
+
+#game button:hover {
+	opacity: 0.8;
+}
+
+#game {
+	max-width: 40rem;
+	max-height: 40rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 1rem;
+	margin: 2rem 0;
+}
+
+#result {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	max-height: 35px;
+}
