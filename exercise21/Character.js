@@ -8,14 +8,8 @@ export class Character {
 
 	attack(target) {
 		let dmg = 0;
-		if (target.position === "def") {
-			if (this.atk - (target.def + target.shield) > 0) {
-				dmg = this.atk - (target.def + target.shield);
-			}
-		} else {
-			if (this.atk - target.def > 0) {
-				dmg = this.atk - target.def;
-			}
+		if (this.atk - target.def > 0) {
+			dmg = this.atk - target.def;
 		}
 		target.hp = target.hp - dmg > 0 ? target.hp - dmg : 0;
 	}

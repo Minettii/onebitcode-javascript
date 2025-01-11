@@ -10,14 +10,8 @@ export class Warrior extends Character {
 	attack(target) {
 		if (this.position === "atk") {
 			let dmg = 0;
-			if (target.position === "def") {
-				if (this.atk - (target.def + target.shield) > 0) {
-					dmg = this.atk - (target.def + target.shield);
-				}
-			} else {
-				if (this.atk - target.def > 0) {
-					dmg = this.atk - target.def;
-				}
+			if (this.atk - target.def > 0) {
+				dmg = this.atk - target.def;
 			}
 			target.hp = target.hp - dmg > 0 ? target.hp - dmg : 0;
 		}
@@ -27,9 +21,11 @@ export class Warrior extends Character {
 		switch (this.position) {
 			case "atk":
 				this.position = "def";
+				this.def += this.shield;
 				break;
 			case "def":
 				this.position = "atk";
+				this.def -= this.shield;
 				break;
 		}
 	}

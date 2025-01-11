@@ -16,7 +16,6 @@ console.table({ arthur, beatrice, cain });
 
 cain.attack(arthur);
 arthur.heal(arthur);
-cain.changePosition();
 beatrice.attack(cain);
 
 console.table({ arthur, beatrice, cain });

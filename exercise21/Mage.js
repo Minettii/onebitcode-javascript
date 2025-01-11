@@ -8,14 +8,8 @@ export class Mage extends Character {
 
 	attack(target) {
 		let dmg = 0;
-		if (target.position === "def") {
-			if (this.atk + this.mp - (target.def + target.shield) > 0) {
-				dmg = this.atk + this.mp - (target.def + target.shield);
-			}
-		} else {
-			if (this.atk + this.mp - target.def > 0) {
-				dmg = this.atk + this.mp - target.def;
-			}
+		if (this.atk + this.mp - target.def > 0) {
+			dmg = this.atk + this.mp - target.def;
 		}
 		target.hp = target.hp - dmg > 0 ? target.hp - dmg : 0;
 	}
