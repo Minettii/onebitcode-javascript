@@ -1,0 +1,24 @@
+{
+  "transactions": [
+    {
+      "id": "3",
+      "name": "Salário",
+      "value": "2400"
+    },
+    {
+      "id": "8e02",
+      "name": "Mercado",
+      "value": "-1000"
+    },
+    {
+      "id": "ea2b",
+      "name": "Baito",
+      "value": "150"
+    },
+    {
+      "id": "3f04",
+      "name": "Farmácia",
+      "value": "-250"
+    }
+  ]
+}
